@@ -98,7 +98,7 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void removeFromElement(Student student) {
-		// Add your implementation here
+		al.remove(student);
 	}
 
 	@Override
@@ -123,8 +123,13 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) {
-		// Add your implementation here
+	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) 
+	{
+		String[] arr = new al.toArray(new String[al.size()]);
+		for(int i = firstDate;i<lastDate;i++)
+		{
+			arr[i] = al.get(students.indexOf(i));
+		}
 		return null;
 	}
 
@@ -154,7 +159,11 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student getNextStudent(Student student) {
-		// Add your implementation here
+		for(int i =0;i<al.size();i++)
+		{
+			al.get(students.indexOf(student)+1);
+			return students;
+		}
 		return null;
 	}
 }
