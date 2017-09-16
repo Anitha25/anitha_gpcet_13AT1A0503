@@ -43,7 +43,7 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student getStudent(int index) {
-		if(index==0||students==null)
+		if(index<0||students==null)
 			throw new IllegalArgumentException("Students array is null..or index is zero..");
 		for(int i =0;i<students.length;i++)
 		{
@@ -56,7 +56,16 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void setStudent(Student student, int index)
 	{
-		
+		if(student==null)
+			throw new IllegalArgumentException("Student array is null...");
+		if(index<0||index>students.length)
+			throw new IllegalArgumentException("Index less than zero or greater than student  array");
+		LinkedList<students> list = new LinkedList<students>();
+		for(int i =0;i<students.length;i++)
+		{
+			list.add(students[i])
+		}
+		list.remove(index);
 		
 	}
 
