@@ -1,5 +1,5 @@
 import java.util.Date;
-import java.util.ArrayList;
+import java.util.LinkedList;
 /**
  * A fix-sized array of students
  * array length should always be equal to the number of stored elements
