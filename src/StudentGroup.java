@@ -15,7 +15,11 @@ public class StudentGroup implements StudentArrayOperation {
 
 	private Student[] students;
 	
-	
+	LinkedList<students> list = new LinkedList<students>();
+	for(int i =0;i<students.length;i++)
+	{
+		list.add(students[i])
+	}
 	/**
 	 * DO NOT remove or change this constructor, it will be used during task check
 	 * @param length
@@ -68,11 +72,11 @@ public class StudentGroup implements StudentArrayOperation {
 	{
 		if(student==null)
 			throw new IllegalArgumentException("Students array is null..");
-		LinkedList<students> list = new LinkedList<students>();
+		/*LinkedList<students> list = new LinkedList<students>();
 			for(int i =0;i<students.length;i++)
 			{
 				list.add(students[i])
-			}
+			}*/
 		list.add(students.indexOf(0));
 	}
 
@@ -110,11 +114,11 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void remove(Student student) {
-		LinkedList<students> list = new LinkedList<students>();
+		/*LinkedList<students> list = new LinkedList<students>();
 		for(int i =0;i<students.length;i++)
 		{
 			list.add(students[i])
-		}
+		}*/
 		list.remove(student);
 	}
 
@@ -129,7 +133,16 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void removeFromElement(Student student) {
-		//al.remove(student);
+		/*LinkedList<students> list = new LinkedList<students>();
+		for(int i =0;i<students.length;i++)
+		{
+			list.add(students[i])
+		}*/
+		for(int i =0;i<list.size();i++)
+		{
+			if(list(i)==student)
+				list.remove(i);
+		}
 	}
 
 	@Override
