@@ -14,11 +14,11 @@ import java.util.ArrayList;
 public class StudentGroup implements StudentArrayOperation {
 
 	private Student[] students;
-	/*ArrayList<students> al = new ArrayList<students>();
-	for(int i = 0;i<students.length)
+	LinkedList<students> list = new LinkedList<students>();
+	for(int i =0;i<students.length;i++)
 	{
-		al.add(students[i]);
-	}*/
+		list.add(students[i])
+	}
 	
 	/**
 	 * DO NOT remove or change this constructor, it will be used during task check
@@ -60,19 +60,18 @@ public class StudentGroup implements StudentArrayOperation {
 			throw new IllegalArgumentException("Student array is null...");
 		if(index<0||index>students.length)
 			throw new IllegalArgumentException("Index less than zero or greater than student  array");
-		LinkedList<students> list = new LinkedList<students>();
-		for(int i =0;i<students.length;i++)
-		{
-			list.add(students[i])
-		}
+		
 		list.remove(index);
+		list.remove(student);
 		
 	}
 
 	@Override
 	public void addFirst(Student student) 
 	{
-		//al.add(student[0]);
+		if(student==null)
+			throw new IllegalArgumentException("Students array is null..")
+		list.add(students[first]);
 	}
 
 	@Override
