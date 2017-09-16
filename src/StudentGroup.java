@@ -185,7 +185,11 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public int getCurrentAgeByDate(int indexOfStudent) {
-		// Add your implementation here
+		for(int i =0;i<list.size();i++)
+		{
+			if(students[i]==indexOfStudents)
+				return list.get(students.fullName(i));
+		}
 		return 0;
 	}
 
@@ -210,11 +214,11 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student getNextStudent(Student student) {
-		/*for(int i =0;i<al.size();i++)
+		for(int i =0;i<list.size();i++)
 		{
-			al.get(students.indexOf(student)+1);
-			return students;
-		}*/
+			
+			return list.get(students.indexOf(student)+1);
+		}
 		return null;
 	}
 }
