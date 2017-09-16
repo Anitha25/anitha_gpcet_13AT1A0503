@@ -14,11 +14,11 @@ import java.util.ArrayList;
 public class StudentGroup implements StudentArrayOperation {
 
 	private Student[] students;
-	ArrayList<students> al = new ArrayList<students>();
+	/*ArrayList<students> al = new ArrayList<students>();
 	for(int i = 0;i<students.length)
 	{
 		al.add(students[i]);
-	}
+	}*/
 	
 	/**
 	 * DO NOT remove or change this constructor, it will be used during task check
@@ -36,11 +36,15 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void setStudents(Student[] students) {
+		if(students.length==0)
+			throw new IllegalArgumentException("Length is zero...");
 		this.students =students;
 	}
 
 	@Override
 	public Student getStudent(int index) {
+		if(index==0||students==null)
+			throw new IllegalArgumentException("Students array is null..or index is zero..");
 		for(int i =0;i<students.length;i++)
 		{
 			if(i==index)
@@ -59,46 +63,46 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void addFirst(Student student) 
 	{
-		al.add(student[0]);
+		//al.add(student[0]);
 	}
 
 	@Override
 	public void addLast(Student student) {
-		al.add(students(al.size()));
+		//al.add(students(al.size()));
 	}
 
 	@Override
 	public void add(Student student, int index) {
 		
-	    this.student = Student[index];
+	    //this.student = Student[index];
 	}
 
 	@Override
 	public void remove(int index) {
-		for(int i=0;i<students.length;i++)
+		/*for(int i=0;i<students.length;i++)
 		{
 			if(i==index)
 				al.remove(index);
-		}
+		}*/
 	}
 
 	@Override
 	public void remove(Student student) {
-		al.remove(student);
+		//al.remove(student);
 	}
 
 	@Override
 	public void removeFromIndex(int index) {
-		for(int i =0;i<al.size();i++)
+		/*for(int i =0;i<al.size();i++)
 		{
 			if(i==index)
 				al.remove(students)
-		}
+		}*/
 	}
 
 	@Override
 	public void removeFromElement(Student student) {
-		al.remove(student);
+		//al.remove(student);
 	}
 
 	@Override
@@ -125,11 +129,11 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) 
 	{
-		String[] arr = new al.toArray(new String[al.size()]);
+		/*String[] arr = new al.toArray(new String[al.size()]);
 		for(int i = firstDate;i<lastDate;i++)
 		{
 			arr[i] = al.get(students.indexOf(i));
-		}
+		}*/
 		return null;
 	}
 
@@ -159,11 +163,11 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student getNextStudent(Student student) {
-		for(int i =0;i<al.size();i++)
+		/*for(int i =0;i<al.size();i++)
 		{
 			al.get(students.indexOf(student)+1);
 			return students;
-		}
+		}*/
 		return null;
 	}
 }
