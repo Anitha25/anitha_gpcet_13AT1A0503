@@ -92,8 +92,11 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void add(Student student, int index) {
-		
-	    //this.student = Student[index];
+		if(student==nul)
+			throw new IllegalArgumentException();
+		students[0]=student;
+		list.add(students.indexOfStudent);
+	    this.student = Student[index];
 	}
 
 	@Override
@@ -107,7 +110,12 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void remove(Student student) {
-		//al.remove(student);
+		LinkedList<students> list = new LinkedList<students>();
+		for(int i =0;i<students.length;i++)
+		{
+			list.add(students[i])
+		}
+		list.remove(student);
 	}
 
 	@Override
