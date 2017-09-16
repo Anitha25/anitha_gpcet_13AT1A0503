@@ -1,5 +1,5 @@
 import java.util.Date;
-
+import java.util.ArrayList;
 /**
  * A fix-sized array of students
  * array length should always be equal to the number of stored elements
@@ -14,6 +14,11 @@ import java.util.Date;
 public class StudentGroup implements StudentArrayOperation {
 
 	private Student[] students;
+	ArrayList<students> al = new ArrayList<students>();
+	for(int i = 0;i<students.length)
+	{
+		al.add(students[i]);
+	}
 	
 	/**
 	 * DO NOT remove or change this constructor, it will be used during task check
@@ -45,39 +50,50 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public void setStudent(Student student, int index) {
+	public void setStudent(Student student, int index)
+	{
 		
 		
 	}
 
 	@Override
-	public void addFirst(Student student) {
-		// Add your implementation here
+	public void addFirst(Student student) 
+	{
+		al.add(student[0]);
 	}
 
 	@Override
 	public void addLast(Student student) {
-		// Add your implementation here
+		al.add(students(al.size()));
 	}
 
 	@Override
 	public void add(Student student, int index) {
-		// Add your implementation here
+		
+	    this.student = Student[index];
 	}
 
 	@Override
 	public void remove(int index) {
-		// Add your implementation here
+		for(int i=0;i<students.length;i++)
+		{
+			if(i==index)
+				al.remove(index);
+		}
 	}
 
 	@Override
 	public void remove(Student student) {
-		// Add your implementation here
+		al.remove(student);
 	}
 
 	@Override
 	public void removeFromIndex(int index) {
-		// Add your implementation here
+		for(int i =0;i<al.size();i++)
+		{
+			if(i==index)
+				al.remove(students)
+		}
 	}
 
 	@Override
