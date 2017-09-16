@@ -60,10 +60,7 @@ public class StudentGroup implements StudentArrayOperation {
 			throw new IllegalArgumentException("Student array is null...");
 		if(index<0||index>students.length)
 			throw new IllegalArgumentException("Index less than zero or greater than student  array");
-		
-		
-		list.add(students[this.student(index)]);
-		list.add(index);
+		list.add(students[index]=student);
 		
 	}
 
