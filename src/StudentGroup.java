@@ -14,11 +14,7 @@ import java.util.ArrayList;
 public class StudentGroup implements StudentArrayOperation {
 
 	private Student[] students;
-	LinkedList<students> list = new LinkedList<students>();
-	for(int i =0;i<students.length;i++)
-	{
-		list.add(students[i])
-	}
+	
 	
 	/**
 	 * DO NOT remove or change this constructor, it will be used during task check
@@ -61,8 +57,9 @@ public class StudentGroup implements StudentArrayOperation {
 		if(index<0||index>students.length)
 			throw new IllegalArgumentException("Index less than zero or greater than student  array");
 		
-		list.remove(index);
-		list.remove(student);
+		
+		list.add(students[this.student(index)]);
+		list.add(index);
 		
 	}
 
@@ -70,13 +67,27 @@ public class StudentGroup implements StudentArrayOperation {
 	public void addFirst(Student student) 
 	{
 		if(student==null)
-			throw new IllegalArgumentException("Students array is null..")
-		list.add(students[first]);
+			throw new IllegalArgumentException("Students array is null..");
+		LinkedList<students> list = new LinkedList<students>();
+			for(int i =0;i<students.length;i++)
+			{
+				list.add(students[i])
+			}
+		list.add(students.indexOf(0));
 	}
 
 	@Override
 	public void addLast(Student student) {
-		//al.add(students(al.size()));
+		if(student==null)
+			throw new IllegalArgumentExceeption("Student array is null....")
+		if(index>atudent.length)
+			throw new IllegalArgumentException("Index is greater than student array ..length")
+			LinkedList<students> list = new LinkedList<students>();
+			for(int i =0;i<students.length;i++)
+			{
+				list.add(students[i])
+			}
+			list.add(students.length-1);
 	}
 
 	@Override
@@ -87,11 +98,11 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void remove(int index) {
-		/*for(int i=0;i<students.length;i++)
+		for(int i=0;i<students.length;i++)
 		{
 			if(i==index)
-				al.remove(index);
-		}*/
+				l.remove(index);
+		}
 	}
 
 	@Override
