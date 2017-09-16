@@ -124,11 +124,11 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void removeFromIndex(int index) {
-		/*for(int i =0;i<al.size();i++)
+		for(int i =0;i<al.size();i++)
 		{
 			if(i==index)
-				al.remove(students)
-		}*/
+				al.remove(students[i]);
+		}
 	}
 
 	@Override
@@ -169,11 +169,11 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) 
 	{
-		/*String[] arr = new al.toArray(new String[al.size()]);
+		String[] arr = new al.toArray(new String[al.size()]);
 		for(int i = firstDate;i<lastDate;i++)
 		{
-			arr[i] = al.get(students.indexOf(i));
-		}*/
+			arr[i] = al.get.indexOf(students[i]));
+		}
 		return null;
 	}
 
@@ -191,13 +191,20 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student[] getStudentsByAge(int age) {
-		// Add your implementation here
+	
+		for(int i=0;i<list.size();i++)
+		{
+			if(students.age==age)
+				arr[i] = list.get(students.indexOf(i));
+			return arr;
+		}
 		return null;
 	}
 
 	@Override
 	public Student[] getStudentsWithMaxAvgMark() {
-		// Add your implementation here
+		
+		
 		return null;
 	}
 
